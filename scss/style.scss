@@ -2,6 +2,7 @@
   box-sizing: content-box;
 }
 
+
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
 
@@ -13,11 +14,6 @@ body {
 
 /*стили header*/
 
-footer {
-  background-color: #f2f2f2;
-  margin: 0px;
-  padding: 0px;
- }
 
 .header__menu {
   margin: 33px 0px ;
@@ -126,6 +122,14 @@ footer {
 
 
 /* стили help*/
+
+.main__help {
+  //display: flex;
+
+  padding: 0px;
+  margin: 0px;
+}
+
 .box__cell {
   width: 238px;
   height: 560px; // ***** уменьшить на 100
@@ -234,15 +238,18 @@ footer {
   text-transform: uppercase;
 }
 
+.need__all {
+  max-width: 710px;
+}
+
 .all_line {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
   font-size: 10.125px;
   line-height: 16px;
-    text-align: right;
+  text-align: right;
   text-transform: uppercase;
-
   color: #4C4C4C;
 }
 
@@ -343,8 +350,25 @@ footer {
 /* стили footer */
 
 .footer {
+  background-color: #f2f2f2;
   padding: 0px;
   margin: 0px;
+  display: flex;
+
+  padding-right: 42px;
+  padding-left: 42px;
+
+  max-width: 1024px;
+
+
+}
+
+@media (min-width: 576px) {
+  .footer {
+    padding-right: 42px;
+    padding-left: 42px;
+  }
+
 }
 
 .inf__rul a {
@@ -368,16 +392,41 @@ footer {
 .footer__inf {
   max-height: 117px;
   max-width: 299px;
+
+  margin-bottom: 20px;
 }
 
 .footer__menu {
-  max-height: 75px;
-  max-width: 206px;
+
+  margin: 0px;
+  padding: 0px;
 }
+
+@media (min-width: 576px) {
+  .footer__menu {
+    max-height: 75px;
+    max-width: 206px;
+  }
+
+  .menu__nav_footer {
+    max-height: 55px;
+    max-width: 206px;
+  }
+
+}
+
+
 
 .footer__contacts {
   max-height: 104px;
   max-width: 245px;
+
+
+  margin: 0px;
+  padding: 0px;
+
+
+
 }
 
 .tel__num a{
@@ -398,4 +447,12 @@ footer {
   line-height: 16px;
   text-align: right;
   color: #4C4C4C;
+}
+
+.contacts__tel,
+.footer__addr,
+.footer__soc {
+  margin: 0px;
+  padding: 0px;
+
 }
