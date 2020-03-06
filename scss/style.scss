@@ -1,0 +1,401 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+
+
+body {
+  background-color: #FFFFFF;
+}
+
+
+/*стили header*/
+
+footer {
+  background-color: #f2f2f2;
+  margin: 0px;
+  padding: 0px;
+ }
+
+.header__menu {
+  margin: 33px 0px ;
+}
+
+.nav__item {
+  margin-right: 5px;
+}
+
+
+%font-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.125px;
+  line-height: 16px;
+  color: #4C4C4C;
+}
+
+.item__link {
+  @extend %font-header;
+  height: 14px;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.item__link_font_up {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.menu-help__nav {
+  .nav__item {
+    margin-right: 20px;
+  }
+}
+
+.header_logo {
+  width: 299px;
+  height: 43px;
+}
+
+.header_heart {
+  width: 220.08px;
+  height: 28.13px;
+  background-image: url("../img/header_heart.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  border-radius: 3px;
+  a {
+    @extend %font-header;
+    color: #ffffff;
+  }
+}
+
+
+
+
+/*стили main*/
+
+/*стили afonskii*/
+
+.main__afonskii {
+  margin: 0px 42px;
+}
+
+.afonskii__article {
+  max-width: 460px;
+  margin-right: 22.63px;
+}
+
+
+.article__quote {
+  font-family: Cormorant Garamond;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 43.0588px;
+  line-height: 52px;
+  color: #2B2B2B;
+  text-indent: -29px;
+}
+
+.quote__mark_gold {
+  color: #F4CE77;
+}
+
+%font-article {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 19px;
+  color: #4C4C4C;
+
+}
+
+.article__sub {
+  @extend %font-article;
+}
+
+.article__text {
+  @extend %font-article;
+}
+
+
+/* стили help*/
+.box__cell {
+  width: 238px;
+  height: 560px; // ***** уменьшить на 100
+
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 8px;
+}
+
+.cell__sum {
+ margin: 0px;
+}
+
+
+%font-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 29.8909px;
+  line-height: 130px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.title {
+  @extend %font-title;
+}
+
+
+
+.cell__name {
+  font-family: Cormorant Garamond;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24.9412px;
+  line-height: 108px;
+   color: #2B2B2B;
+}
+
+.cell__txt {
+  @extend %font-article
+}
+
+
+%font-help {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.125px;
+  line-height: 16px;
+  color: #4C4C4C;
+}
+
+.help_det-link {
+  @extend %font-help
+}
+
+.collect {
+  @extend %font-help
+}
+
+.left_rouble,
+.right_rouble {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14.3571px;
+  line-height: 23px;
+}
+
+.left_rouble {
+  color: #F4CE77;
+}
+
+.right_rouble {
+  color: #E20613;
+}
+
+.help_link-heart {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12.0548px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #CA030F;
+}
+
+.cell__heart {
+  width: 220.08px;
+  height: 30.13px;
+  background-image: url("../img/cell__heart.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  border-radius: 3px;
+  margin: 0px;
+  a {
+    @extend %font-header;
+    color: #CA030F;
+  }
+}
+
+.help_link-heart {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.all_line {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.125px;
+  line-height: 16px;
+    text-align: right;
+  text-transform: uppercase;
+
+  color: #4C4C4C;
+}
+
+.help__need,
+.help__already {
+  padding: 0px;
+}
+
+
+  /*стили news*/
+
+.main__box-news {
+  margin-top: 112px;
+}
+
+.box-news__title {
+  @extend %font-title;
+}
+
+.container__news {
+  width: 220px;
+  margin: 0px 20px 0px 0px;
+
+}
+
+.news___title {
+  width: 140px;
+  margin-right: 20px;
+  margin-bottom: 32px;
+}
+
+
+.news___title h3{
+  font-family: Cormorant Garamond;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: #4C4C4C;
+
+ }
+
+.title_line-height_little {
+  line-height: 21px;
+}
+
+.title_line-height_big {
+  line-height: 75px;
+}
+
+
+.news__txt {
+  @extend  %font-article;
+  margin-bottom: 8px;
+
+}
+
+.news__dat {
+  width: 60px;
+  height: 74px;
+  margin-bottom: 16.92px;
+
+  background-image: url("../img/news__dat.jpg");
+  background-repeat: no-repeat;
+  background-position: center top ;
+}
+
+.dat__day {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 43.1511px;
+  //line-height: 187px;
+  text-align: center;
+  color: #4C4C4C;
+  width: 58px;
+  height: 45px;
+}
+
+.dat__mon {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  //line-height: 19px;
+  text-align: center;
+  color: #4C4C4C;
+  width: 58px;
+  height: 16px;
+}
+
+
+.news__more {
+  @extend %font-help
+}
+
+
+
+/* стили footer */
+
+.footer {
+  padding: 0px;
+  margin: 0px;
+}
+
+.inf__rul a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.125px;
+  line-height: 6px;
+  color: #4C4C4C;
+}
+
+.footer__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.125px;
+  line-height: 11px;
+  color: #4C4C4C;
+}
+
+.footer__inf {
+  max-height: 117px;
+  max-width: 299px;
+}
+
+.footer__menu {
+  max-height: 75px;
+  max-width: 206px;
+}
+
+.footer__contacts {
+  max-height: 104px;
+  max-width: 245px;
+}
+
+.tel__num a{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24.8276px;
+  line-height: 39px;
+  text-align: right;
+  color: #4C4C4C;
+}
+
+.addr__vrn a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.125px;
+  line-height: 16px;
+  text-align: right;
+  color: #4C4C4C;
+}
