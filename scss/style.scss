@@ -1,11 +1,5 @@
-.selector-for-some-widget {
-  box-sizing: content-box;
-}
-
-
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
-
 
 body {
   background-color: #FFFFFF;
@@ -14,27 +8,26 @@ body {
 
 /*стили header*/
 
-
 .header__menu {
-  margin: 33px 0px 0px 0px;
+  margin: 0 0 0 0;
 }
+
+.nav__item {
+  margin: 33px 0 0 0;
+}
+
+@media (max-width: 576px) {
+  .nav__item {
+    margin: 15px 0 0 0;
+    text-align: center;
+  }
+ }
 
 
 @media (min-width: 576px) {
   .header__menu {
-    margin: 33px 0px 0px 80px;
+    margin: 33px 0 0 80px;
   }
-
-}
-
-.header__menu-help {
-  .nav__item {
-    margin: 33px 0px 0px 0px;
-  }
-}
-
-.nav__item {
-  margin-right: 5px;
 }
 
 .menu__nav {
@@ -52,8 +45,21 @@ body {
   .nav__item:focus::before{
     background: #F4CE77;
   }
-
 }
+
+@media (max-width: 576px) {
+  .menu__nav {
+    .nav__item::before {
+     top: -5px;
+    }
+  }
+}
+
+.nav__item {
+  margin-right: 5px;
+}
+
+
 
 
 %font-header {
@@ -73,11 +79,11 @@ body {
   padding: 0px;
 }
 
-.item__link_font_up {
-  text-align: center;
-  text-transform: uppercase;
-  width: 140px;
-  height: 14px;
+
+.header__menu-help {
+  .nav__item {
+    margin: 33px 0 0 0;
+  }
 }
 
 
@@ -85,14 +91,19 @@ body {
   .nav__item {
     margin-right: 20px;
   }
-
   .header_logo {
     margin-right: 101px;
   }
   .header_heart {
     margin-right: 0px;
   }
+}
 
+.item__link_font_up {
+  text-align: center;
+  text-transform: uppercase;
+  width: 140px;
+  height: 14px;
 }
 
 .nav__item_gray-line_up::before {
@@ -118,29 +129,33 @@ body {
   background-repeat: no-repeat;
   background-position: right center;
   border-radius: 3px;
-  margin-left: 0px;
+  margin-left: 0;
    a {
     @extend %font-header;
     color: #ffffff;
   }
 }
 
-
+/*конец стилей header*/
 
 
 /*стили main*/
+.main {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  max-width: 1024px;
+}
 
 /*стили afonskii*/
-
 .main__afonskii {
-  margin: 68px 42px 123px 42px;
+  margin: 68px 0 123px 0;
+  padding: 0 42px 0 42px;
 }
 
 .afonskii__article {
-  max-width: 465px;  // *** по макету 465px
+  max-width: 465px;
   margin-right: 20.78px;
 }
-
 
 .article__quote {
   font-family: Cormorant Garamond;
@@ -176,8 +191,6 @@ body {
   }
 }
 
-
-
 .article__sub p::before {
   content: "";
   display: block;
@@ -189,8 +202,6 @@ body {
   height: 1px;
   width: 60px;
 }
-
-
 
 .article__text {
   @extend %font-article;
@@ -208,36 +219,35 @@ body {
   width: 60px;
 }
 
-
 /* стили help*/
 
 .main__help {
-  //display: flex;
+  padding: 0;
+  margin: 0;
+}
 
-  padding: 0px;
-  margin: 0px;
+.need__box,
+.already__box {
+  margin: 0;
 }
 
 .box__cell {
-  width: 238px;
+  width: 220px;
   height: 462px; // было 460
-
-  margin-right: 10px;
-  padding-left: 10px;
-  padding-right: 8px;
+  margin-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .cell__sum {
- margin: 0px 0px 0px 0px;
+ margin: 0;
 }
-
 
 %font-title {
   font-family: Roboto;
   font-style: normal;
   font-weight: 200;
   font-size: 29.8909px;
-  //line-height: 130px;
   text-transform: uppercase;
   color: #000000;
 }
@@ -252,14 +262,11 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 24.9412px;
-  //line-height: 108px;
   color: #2B2B2B;
   width: 220px;
   height: 33px;
-
   margin-bottom: 7px;
   margin-top: 48px;
-
 }
 
 .cell__name::before {
@@ -279,7 +286,6 @@ body {
   margin-bottom: 0px;
 }
 
-
 %font-help {
   font-family: Roboto;
   font-style: normal;
@@ -290,13 +296,10 @@ body {
 }
 
 .cell__det {
-  //width: 63px;
   height: 14px;
   margin-bottom: 18px;
   line-height: 0px;
-
 }
-
 
 .help_det-link {
   @extend %font-help;
@@ -320,13 +323,12 @@ body {
 
 .sum {
   margin-bottom: 3.86px;
-
 }
+
 .collect {
   @extend %font-help;
   line-height: 14px;
   margin-bottom: 2px;
-
 }
 
 .left_rouble,
@@ -390,38 +392,36 @@ body {
   border: 1px solid #979797;
   box-sizing: border-box;
   border-radius: 2px;
+  margin-right: 0px;
+  padding-left: 10px;
+  padding-right: 8px;
+  width: 238px;
 }
 
 .cell__sum_orange {
   background: #F4CE77;
   border-radius: 2px;
-
   background-image: url("../img/heart_already.jpg");
   background-repeat: no-repeat;
   background-position: right 7px top 8px;
-
   width: 221px;
   height: 48px;
-
   .left_collect {
     margin: 2px 0px 2px 6px;
   }
-
   .right_rouble {
     margin: 0px 0px 7px 6px;
   }
-
 }
-
-
 /* конец стилей левой ячейки с серой границей*/
+
 .need__all {
   max-width: 710px;
-  margin-top: 36.87px;
+  margin: 40px 0 0 0;
 }
 
 .already__all {
-  margin-top: 40px;
+  margin: 40px 0 0 0;
 }
 
 .all_line {
@@ -433,12 +433,10 @@ body {
   text-align: right;
   text-transform: uppercase;
   color: #4C4C4C;
-
   p {
     width: 140px;
     height: 14px;
   }
-
   p::before {
     content: "";
     display: block;
@@ -450,7 +448,6 @@ body {
     height: 1.08px;
     width: 219px;
   }
-
   p::after {
     content: "";
     display: block;
@@ -462,24 +459,39 @@ body {
     height: 1.08px;
     width: 60px;
   }
-
 }
 
-.help__need,
+.help__need  {
+  padding: 0 0 0 42px;
+}
+
 .help__already {
-  padding: 0px;
+  padding: 0 34px 0 0;
 }
 
+@media (max-width: 576px) {
+  .help__need,
+  .help__already {
+    padding: 0 0 0 0;
+  }
+}
 
   /*стили news*/
 
 .main__box-news {
-  margin-top: 112px;
+  margin: 112px auto 0 auto;
+  padding: 0 22px 0 42px;
+}
+
+@media (max-width: 576px) {
+  .main__box-news {
+    padding: 0 0 0 0;
+  }
 }
 
 .box-news__container {
-  margin: 0px 0px 0px 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .box-news__title {
@@ -489,11 +501,17 @@ body {
 .container__news {
   width: 220px;
   margin: 0px 20px 47.92px 0px;
+}
 
+@media (max-width: 576px) {
+  .container__news {
+    margin: 0px 0px 47.92px 0px;
+  }
 }
 
 .news___title {
   width: 140px;
+  height: 75px;
   margin-right: 20px;
   margin-bottom: 32px;
 }
@@ -502,14 +520,13 @@ body {
   content: "";
   display: block;
   position: relative;
-  bottom: 0px;
+  bottom: 8px;
   left: 0px;
   background: #F4CE77;
   border-radius: 1px;
- height: 1.08px;
+  height: 1.08px;
   width: 60px;
 }
-
 
 .news___title h3{
   font-family: Cormorant Garamond;
@@ -517,7 +534,8 @@ body {
   font-weight: normal;
   font-size: 17px;
   color: #4C4C4C;
-
+  width: 140px;
+  height: 75px;
  }
 
 .title_line-height_little {
@@ -528,18 +546,15 @@ body {
   line-height: 75px;
 }
 
-
 .news__txt {
   @extend  %font-article;
   margin-bottom: 8px;
-
 }
 
 .news__dat {
   width: 60px;
   height: 74px;
   margin-bottom: 16.92px;
-
   background-image: url("../img/news__dat.jpg");
   background-repeat: no-repeat;
   background-position: center top ;
@@ -556,7 +571,6 @@ body {
   width: 58px;
   height: 45px;
   margin: 0px;
-
   text-align: center;
 }
 
@@ -573,11 +587,9 @@ body {
 }
 
 .news__more {
-
   margin-bottom: 0px;
   line-height: 0px;
   width: 100%;
-
 }
 
 .news__more a{
@@ -600,26 +612,17 @@ body {
 }
 
 
+/* конец стилей main*/
+
 
 /* стили footer */
-
 .footer {
   background-color: #f2f2f2;
-  padding: 0px;
-  margin: 0px;
+  padding: 0 42px 35px 42px;
+  margin: 0 auto 0 auto;
   display: flex;
-
-  padding-right: 42px;
-  padding-left: 42px;
-
-
-
   max-width: 1024px;
-  margin-right: auto;
-  margin-left: auto;
-
-
-
+  min-height: 218px;
 }
 
 @media (min-width: 576px) {
@@ -627,7 +630,6 @@ body {
     padding-right: 42px;
     padding-left: 42px;
   }
-
 }
 
 .inf__rul a {
@@ -646,49 +648,46 @@ body {
   font-size: 10.125px;
   line-height: 11px;
   color: #4C4C4C;
+  margin-bottom: 9px;
 }
 
+
+@media (min-width: 576px) {
+  .footer__link_line_folding {
+    width: 60px;
+    height: 26px;
+  }
+}
 .footer__inf {
   max-height: 117px;
   max-width: 299px;
-
   margin-bottom: 20px;
 }
 
 .footer__menu {
-
   margin: 0px;
   padding: 0px;
 }
 
 @media (min-width: 576px) {
   .footer__menu {
-    max-height: 75px;
+    max-height: 80px;
     max-width: 206px;
   }
-
   .menu__nav_footer {
-    max-height: 45px;
+    max-height: 80px;
     max-width: 206px;
   }
-
 }
-
-
 
 .footer__contacts {
   max-height: 104px;
   max-width: 245px;
-
-
-  margin: 0px;
-  padding: 0px;
-
-
-
+  margin: 0;
+  padding: 0;
 }
 
-.tel__num a{
+.tel__num a {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
@@ -711,7 +710,31 @@ body {
 .contacts__tel,
 .footer__addr,
 .footer__soc {
-  margin: 0px;
-  padding: 0px;
-
+  margin: 0;
+  padding: 0;
 }
+
+.contacts__tel {
+  margin: 0 0 7px 0;
+}
+
+.footer__addr {
+  margin: 0 0 34px 0;
+}
+.footer__soc a {
+  text-decoration: none;
+ }
+
+.footer__soc::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -10px;
+  left: 56px;
+  background: #F4CE77;
+  border-radius: 1px;
+  height: 1px;
+  width: 140px;
+}
+
+/* конец стилей footer */
