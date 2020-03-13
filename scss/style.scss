@@ -21,7 +21,7 @@ body {
     margin: 15px 0 0 0;
     text-align: center;
   }
- }
+}
 
 
 @media (min-width: 576px) {
@@ -50,7 +50,7 @@ body {
 @media (max-width: 576px) {
   .menu__nav {
     .nav__item::before {
-     top: -5px;
+      top: -5px;
     }
   }
 }
@@ -114,7 +114,7 @@ body {
   background: #EFEFEF;
   border-radius: 1px;
   height: 1px;
-  }
+}
 
 .header_logo {
   width: 299px;
@@ -130,7 +130,7 @@ body {
   background-position: right center;
   border-radius: 3px;
   margin-left: 0;
-   a {
+  a {
     @extend %font-header;
     color: #ffffff;
   }
@@ -251,7 +251,7 @@ body {
 }
 
 .cell__sum {
- margin: 0;
+  margin: 0;
 }
 
 %font-title {
@@ -487,7 +487,7 @@ body {
   }
 }
 
-  /*стили news*/
+/*стили news*/
 
 
 
@@ -553,7 +553,7 @@ body {
   color: #4C4C4C;
   width: 140px;
   height: 75px;
- }
+}
 
 .title_line-height_little {
   line-height: 21px;
@@ -613,7 +613,7 @@ body {
   width: 63px;
   height: 14px;
   text-align: center;
-  }
+}
 
 .news__more a::after {
   content: "";
@@ -626,7 +626,6 @@ body {
   height: 1.08px;
   width: 60px;
 }
-
 
 /* конец стилей main*/
 
@@ -766,7 +765,7 @@ footer {
 }
 .footer__soc a {
   text-decoration: none;
- }
+}
 
 .footer__soc {
   position: relative;
@@ -786,10 +785,8 @@ footer {
 
 @media (max-width: 576px) {
   .footer__soc::before {
-
     top: -10px;
     left: 36px;
-
   }
 }
 /* конец стилей footer */
