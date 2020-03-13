@@ -63,7 +63,7 @@ body {
 
 
 %font-header {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 10.125px;
@@ -75,8 +75,8 @@ body {
   @extend %font-header;
   height: 13px;
 
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -95,7 +95,7 @@ body {
     margin-right: 101px;
   }
   .header_heart {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -158,7 +158,7 @@ body {
 }
 
 .article__quote {
-  font-family: Cormorant Garamond;
+  font-family: Cormorant Garamond, 'Times New Roman', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 43.0588px;
@@ -172,7 +172,7 @@ body {
 }
 
 %font-article {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -182,12 +182,12 @@ body {
 
 .article__sub {
   @extend %font-article;
-  margin: 38px 0px 41px 0px;
-  padding: 0px;
+  margin: 38px 0 41px 0;
+  padding: 0;
   p {
     width: 137px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -205,14 +205,21 @@ body {
 
 .article__text {
   @extend %font-article;
+  max-width: 465px;
 }
+
+/*@media (max-width: 576px) {
+  .article__text {
+    font-size: 10px;
+  }
+}*/
 
 .article__text::after {
   content: "";
   display: block;
   position: relative;
   bottom: -37px;
-  left: 0px;
+  left: 0;
   background: #F4CE77;
   border-radius: 1px;
   height: 1.08px;
@@ -235,8 +242,12 @@ body {
   width: 220px;
   height: 462px; // было 460
   margin-right: 20px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.box__cell_left {
+  margin-right: 10px;
 }
 
 .cell__sum {
@@ -244,7 +255,7 @@ body {
 }
 
 %font-title {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 200;
   font-size: 29.8909px;
@@ -258,7 +269,7 @@ body {
 }
 
 .cell__name {
-  font-family: Cormorant Garamond;
+  font-family: Cormorant Garamond, 'Times New Roman', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24.9412px;
@@ -274,7 +285,7 @@ body {
   display: block;
   position: relative;
   top: -13.92px;
-  left: 0px;
+  left: 0;
   background: #F4CE77;
   border-radius: 1px;
   height: 1.08px;
@@ -283,11 +294,11 @@ body {
 
 .cell__txt {
   @extend %font-article;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 %font-help {
-  font-family: Roboto;
+  font-family: Roboto, Arial, serif;
   font-style: normal;
   font-weight: 300;
   font-size: 10.125px;
@@ -298,7 +309,7 @@ body {
 .cell__det {
   height: 14px;
   margin-bottom: 18px;
-  line-height: 0px;
+  line-height: 0;
 }
 
 .help_det-link {
@@ -309,7 +320,7 @@ body {
   content: "";
   display: block;
   position: relative;
-  bottom: 0px;
+  bottom: 0;
   left: 160px;
   background: #F4CE77;
   border-radius: 1px;
@@ -333,13 +344,13 @@ body {
 
 .left_rouble,
 .right_rouble {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14.3571px;
   line-height: 19px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .left_rouble {
@@ -352,12 +363,12 @@ body {
 
 .sum__line {
   height: 9px;
-  line-height: 0px;
+  line-height: 0;
   margin-bottom: 20px;
 }
 
 .help_link-heart {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 12.0548px;
@@ -374,7 +385,7 @@ body {
   background-repeat: no-repeat;
   background-position: right bottom;
   border-radius: 3px;
-  margin: 0px;
+  margin: 0;
   a {
     @extend %font-header;
     color: #CA030F;
@@ -392,7 +403,7 @@ body {
   border: 1px solid #979797;
   box-sizing: border-box;
   border-radius: 2px;
-  margin-right: 0px;
+  margin-right: 0;
   padding-left: 10px;
   padding-right: 8px;
   width: 238px;
@@ -407,10 +418,10 @@ body {
   width: 221px;
   height: 48px;
   .left_collect {
-    margin: 2px 0px 2px 6px;
+    margin: 2px 0 2px 6px;
   }
   .right_rouble {
-    margin: 0px 0px 7px 6px;
+    margin: 0 0 7px 6px;
   }
 }
 /* конец стилей левой ячейки с серой границей*/
@@ -425,7 +436,7 @@ body {
 }
 
 .all_line {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 10.125px;
@@ -478,12 +489,14 @@ body {
 
   /*стили news*/
 
+
+
 .main__box-news {
   margin: 112px auto 0 auto;
   padding: 0 22px 0 42px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 476px) {
   .main__box-news {
     padding: 0 0 0 0;
   }
@@ -494,18 +507,22 @@ body {
   padding: 0;
 }
 
+.news___title_dat {
+  margin: 0;
+}
+
 .box-news__title {
   @extend %font-title;
 }
 
 .container__news {
   width: 220px;
-  margin: 0px 20px 47.92px 0px;
+  margin: 0 20px 47.92px 0;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
   .container__news {
-    margin: 0px 0px 47.92px 0px;
+    margin: 0 0 47.92px 0;
   }
 }
 
@@ -521,7 +538,7 @@ body {
   display: block;
   position: relative;
   bottom: 8px;
-  left: 0px;
+  left: 0;
   background: #F4CE77;
   border-radius: 1px;
   height: 1.08px;
@@ -529,7 +546,7 @@ body {
 }
 
 .news___title h3{
-  font-family: Cormorant Garamond;
+  font-family: Cormorant Garamond, 'Times New Roman', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -561,7 +578,7 @@ body {
 }
 
 .dat__day {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 200;
   font-size: 43.1511px;
@@ -570,12 +587,11 @@ body {
   color: #4C4C4C;
   width: 58px;
   height: 45px;
-  margin: 0px;
-  text-align: center;
+  margin: 0;
 }
 
 .dat__mon {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -587,8 +603,8 @@ body {
 }
 
 .news__more {
-  margin-bottom: 0px;
-  line-height: 0px;
+  margin-bottom: 0;
+  line-height: 0;
   width: 100%;
 }
 
@@ -604,7 +620,7 @@ body {
   display: block;
   position: relative;
   bottom: -7px;
-  left: 0px;
+  left: 0;
   background: #F4CE77;
   border-radius: 1px;
   height: 1.08px;
@@ -616,6 +632,10 @@ body {
 
 
 /* стили footer */
+
+footer {
+  background-color: #f2f2f2;
+}
 .footer {
   background-color: #f2f2f2;
   padding: 0 42px 35px 42px;
@@ -633,7 +653,7 @@ body {
 }
 
 .inf__rul a {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 10.125px;
@@ -642,7 +662,7 @@ body {
 }
 
 .footer__link {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 10.125px;
@@ -653,6 +673,11 @@ body {
 
 
 @media (min-width: 576px) {
+
+  .nav-item_line_folding {
+    width: 60px;
+    height: 26px;
+  }
   .footer__link_line_folding {
     width: 60px;
     height: 26px;
@@ -665,17 +690,17 @@ body {
 }
 
 .footer__menu {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 576px) {
   .footer__menu {
-    max-height: 80px;
+    max-height: 75px;
     max-width: 206px;
   }
   .menu__nav_footer {
-    max-height: 80px;
+    max-height: 75px;
     max-width: 206px;
   }
 }
@@ -688,7 +713,7 @@ body {
 }
 
 .tel__num a {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 24.8276px;
@@ -698,7 +723,7 @@ body {
 }
 
 .addr__vrn a {
-  font-family: Roboto;
+  font-family: Roboto, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 10.125px;
@@ -725,16 +750,28 @@ body {
   text-decoration: none;
  }
 
+.footer__soc {
+  position: relative;
+}
+
 .footer__soc::before {
   content: "";
   display: block;
-  position: relative;
+  position: absolute;
   top: -10px;
-  left: 56px;
+  left: 66px;
   background: #F4CE77;
   border-radius: 1px;
   height: 1px;
   width: 140px;
 }
 
+@media (max-width: 576px) {
+  .footer__soc::before {
+
+    top: -10px;
+    left: 36px;
+
+  }
+}
 /* конец стилей footer */
