@@ -694,6 +694,25 @@ footer {
   padding: 0;
 }
 
+.menu__nav_footer::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -16px;
+  left: 0;
+  background: #F4CE77;
+  border-radius: 1px;
+  height: 1.08px;
+  width: 60px;
+}
+
+
+@media (max-width: 576px) {
+  .menu__nav_footer::before {
+    display: none;
+  }
+}
+
 @media (min-width: 576px) {
   .footer__menu {
     max-height: 75px;
